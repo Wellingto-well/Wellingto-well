@@ -30,9 +30,8 @@ for aposta in range(0,1000):
 
     if valor_da_aposta < fim_do_jogo_saldo_total:
 
-        if soma_dos_dados == 7 or soma_dos_dados == 2 or soma_dos_dados == 8:
+        if soma_dos_dados == 7 or soma_dos_dados == 2 :
             print(f'Parabens voce ganhou o resultado do dado foi {soma_dos_dados}')
-            total_vitoria =+ 1
             novo_saldo_vitoria = 0 + valor_da_aposta * 2
             vitoria.append(novo_saldo_vitoria)
 
@@ -42,9 +41,8 @@ for aposta in range(0,1000):
             else:
                 break
 
-        elif soma_dos_dados == 6 or soma_dos_dados == 5:
+        elif soma_dos_dados == 6 or soma_dos_dados == 9 or soma_dos_dados == 5:
             print(f'Que pena voce perdeu o resultado do dado foi: {soma_dos_dados}')
-            total_derrota =+ 1
             novo_saldo_derrota = 0 - valor_da_aposta  
             derrota.append(novo_saldo_derrota)
 
@@ -75,9 +73,8 @@ for aposta in range(0,1000):
     else:
         print(f'O valor da aposta é maior que o saldo. Esse é seu saldo: {saldo}')
 
-    somas_das_vitoria = sum(vitoria)
-    somas_das_derrotas = sum(derrota)
-
-    fim_do_jogo_saldo_total = saldo + (somas_das_vitoria + somas_das_derrotas)
+somas_das_vitoria = sum(vitoria)
+somas_das_derrotas = sum(derrota)
+fim_do_jogo_saldo_total = saldo + (somas_das_vitoria + somas_das_derrotas)
 
 print(f'ESSE FOI O SEU SALDO COM O ENCERRAMENTO DO JOGO: R${fim_do_jogo_saldo_total}')
